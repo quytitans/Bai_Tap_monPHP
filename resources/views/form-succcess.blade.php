@@ -34,24 +34,26 @@
 </div>
 <div>
     <h2>status</h2>
-    @php
-        if (isset($status)){
-        switch ($status){
-                case 1:
-                    echo 'Dang dien ra';
-                break;
-                case 2:
-                    echo 'Sap dien ra';
-                break;
-                  case 3:
-                      echo 'Da dien ra';
-                break;
-                  case 4:
-                      echo 'tam hoan';
-                break;
+    <h2>
+        @php
+            if (isset($status)){
+            switch ($status){
+                    case 1:
+                        echo 'Dang dien ra';
+                    break;
+                    case 2:
+                        echo 'Sap dien ra';
+                    break;
+                      case 3:
+                          echo 'Da dien ra';
+                    break;
+                      case 4:
+                          echo 'tam hoan';
+                    break;
+            }
         }
-    }
-    @endphp
+        @endphp
+    </h2>
 </div>
 </body>
 </html>
