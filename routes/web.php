@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DataHandleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/data-handle/{id}/path', [DataHandleController::class, 'handlePathVariable']);
+Route::get('/data-handle/query-string', [DataHandleController::class, 'handleQueryString']);
+Route::get('/data-handle/form', [DataHandleController::class, 'handleForm']);
+Route::post('/data-handle/form', [DataHandleController::class, 'processForm']);
